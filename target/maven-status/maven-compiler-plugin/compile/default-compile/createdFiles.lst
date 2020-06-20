@@ -1,0 +1,5 @@
+com\tablescoder\cursojavafb\MainApp.class
+Firebase\CRUDFirebase.class
+Firebase\ConexionFirebase.class
+modelos\Persona.class
+com\tablescoder\cursojavafb\FXMLController.class

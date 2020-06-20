@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tablescoder.cursojavafb.FXMLController">
+    <children>
+        <Label layoutX="300.0" layoutY="14.0" minHeight="16" minWidth="69" prefHeight="49.0" prefWidth="276.0" text="Java + firebase" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="34.0" />
+         </font></Label>
+      <JFXTreeTableView fx:id="tabla" layoutX="30.0" layoutY="26.0" onMouseClicked="#getRow" prefWidth="250.0">
+         <columns>
+            <TreeTableColumn fx:id="nombre" prefWidth="75.0" text="Nombre" />
+            <TreeTableColumn fx:id="apellido" prefWidth="75.0" text="Apellido" />
+         </columns>
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </JFXTreeTableView>
+      <JFXTextField fx:id="textfield_nombre" focusColor="#0a0a0a" layoutX="291.0" layoutY="75.0" promptText="Nombre" unFocusColor="BLACK" />
+      <JFXTextField fx:id="textfield_apellido" focusColor="BLACK" layoutX="291.0" layoutY="125.0" promptText="Apellido" unFocusColor="BLACK" />
+      <JFXButton layoutX="467.0" layoutY="100.0" onAction="#add" styleClass="button_add" stylesheets="@../styles/Styles.css" text="Agregar" />
+      <JFXButton layoutX="467.0" layoutY="138.0" onAction="#edit" prefHeight="25.0" prefWidth="59.0" text="Editar">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="button_edi" />
+         </styleClass></JFXButton>
+      <JFXButton layoutX="467.0" layoutY="173.0" onAction="#delete" text="Eliminar">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="button_del" />
+         </styleClass></JFXButton>
+      <Label fx:id="label_estado" layoutX="291.0" layoutY="341.0" prefHeight="27.0" prefWidth="218.0" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="textFieldBuscar" layoutX="300.0" layoutY="226.0" promptText="Buscar" />
+      <JFXRadioButton fx:id="radioButtonNombre" layoutX="300.0" layoutY="283.0" text="Búsqueda por nombre" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="busqueda" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="radioButtonApellido" layoutX="300.0" layoutY="309.0" styleClass="jfx-radio-button" text="Búsqueda por apellido" textFill="WHITE" toggleGroup="$busqueda" />
+    </children>
+</AnchorPane>

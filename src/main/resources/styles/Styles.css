@@ -1,0 +1,51 @@
+
+*
+{
+   -color-white:#FFFFFF; 
+   -color-red: #D10B25;
+   -color-blue: #037BFD;
+   -color-yellow:#FBBC05;
+   -color-transparent: transparent;
+}
+
+
+.button
+{
+    -font-weight: bold; 
+    -fx-text-fill: -color-white;
+    -fx-border-color:-color-white;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: -color-transparent;
+    -fx-selected-color:-color-white;
+    -fx-unselected-color:-color-white;
+}
+    .button_add:hover
+    {
+        -fx-background-color:-color-blue;
+    }
+    .button_edi:hover
+    {
+        -fx-background-color:-color-yellow;
+    }
+    .button_del:hover
+    {
+        -fx-background-color:-color-red;
+    }
+
+.jfx-text-field
+{
+      -fx-prompt-text-fill:-color-white;
+      -fx-text-fill:-color-white;
+      -jfx-focus-color:-color-white;
+      -jfx-unfocus-color:-color-white;
+      -jfx-label-float:true;
+}
+.jfx-radio-button {
+
+}
+
+.background
+{
+    -fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
